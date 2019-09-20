@@ -1,11 +1,15 @@
 <h1>Display your Pirate here</h1>
-<p><%= @pirate.name %></p>
-<p><%= @pirate.weight %></p>
-<p><%= @pirate.height %></p>
 
-<h2>Display your first ship here</h2>
-<p><%= @ship.name %></p>
-<p><%= @ship.weight %></p>
-<p><%= @ship.height %></p>
+<p><%= params["pirate"]["name"] %></p>
+<p><%= params["pirate"]["height"] %></p>
+<p><%= params["pirate"]["weight"] %></p>
 
-<h2>Display your second ship here</h2>
+<h2>Arrggggh. And me ships!<h2>
+
+<p><%= params["pirate"]["ships"][0]["name"] %></p>
+<p><%= params["pirate"]["ships"][0]["type"] %></p>
+<p><%= params["pirate"]["ships"][0]["booty"] %></p>
+
+<p><%= params["pirate"]["ships"][1]["name"] %></p>
+<p><%= params["pirate"]["ships"][1]["type"] %></p>
+<p><%= params["pirate"]["ships"][1]["booty"] %></p>

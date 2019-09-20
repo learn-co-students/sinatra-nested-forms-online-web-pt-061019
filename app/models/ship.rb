@@ -4,19 +4,19 @@ class Ship
 
   @@SHIPS = []
 
-  # def initialize(name:, type:, booty:)
-  #   @name = name
-  #   @type = type
-  #   @booty = booty
-  #   @@SHIPS << self
-  # end
-
-  def initialize(ship_info)
+  def initialize(name:, type:, booty:)
     @name = name
     @type = type
     @booty = booty
     @@SHIPS << self
   end
+
+  # def initialize(ship_info)
+  #   @name = name
+  #   @type = type
+  #   @booty = booty
+  #   @@SHIPS << self
+  # end
 
   def self.all
     @@SHIPS
