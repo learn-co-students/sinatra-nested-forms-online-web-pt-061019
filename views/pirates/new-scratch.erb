@@ -1,0 +1,58 @@
+<h1>Make your form here</h1>
+
+<form method="POST" action="/pirates">
+  <h2>Pirate</h2>
+  <label for="pirate[name]">
+    Name
+    <input type="text" name="pirate[:name]" />
+  </label>
+
+  <label for="pirate[weight]">
+    Weight
+    <input type="text" name="pirate[:weight]" />
+  </label>
+
+  <label for="pirate[height]">
+    Height
+    <input type="text" name="pirate[:height]" />
+  </label>
+
+<h2>Ship #1</h2>
+  <label>
+    Name
+    <input id="ship_name_1" type="text" name="pirate[ships][][name]" />
+  </label>
+
+  <label>
+    Type
+    <input id="ship_type_1" type="text" name="pirate[ships][][type]" />
+  </label>
+
+  <label>
+    Booty
+    <input id="ship_booty_1" type="text" name="pirate[ships][][booty]" />
+  </label>
+
+<h2>Ship #2</h2>
+  <label for="pirate[:ships][][:name]">
+    Name
+    <input id="ship_name_2" type="text" name="pirate[:ships][][:name]" />
+  </label>
+
+  <label for="pirate[:ships][][:type]">
+    Type
+    <input id="ship_type_2" type="text" name="pirate[:ships][][:type]" />
+  </label>
+
+  <label for="pirate[:ships][][:booty]">
+    Booty
+    <input id="ship_booty_2" type="text" name="pirate[:ships][][:booty]" />
+  </label>
+
+  <input type="submit" name="submit" />
+</form>
+
+<!-- Make a nested form (this should probably have html <label>s so it makes sense to a user).
+This form will be creating three objects (one instance of the Pirate class, and two instances of the Ship class).
+Remember, you'll need to build a corresponding controller action to load this page.
+Your form should POST to the route '/pirates'. -->

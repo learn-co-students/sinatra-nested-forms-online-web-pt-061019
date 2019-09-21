@@ -13,24 +13,6 @@ module FormsLab
       erb :'pirates/new'
     end
 
-    get "/show" do
-
-      erb :'pirates/show'
-    end
-
-    post "/pirates" do
-
-      # @pirate = Pirate.new()
-
-
-
-      erb :'pirates/show'
-
-      # params
-      #
-      # ["pirate", {":name"=>"Dread Pirate Roberts", ":weight"=>"100", ":height"=>"100", "ships"=>[{"name"=>"Ship 1", "type"=>"Fleet", "booty"=>"silver"}], ":ships"=>[{":name"=>"Ship 2", ":type"=>"fleet", ":booty"=>"gold"}]}]
-    end
-
     # get "/pirates" do
     #
     #         "Hello"
