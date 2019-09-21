@@ -6,6 +6,8 @@ gem 'shotgun'
 gem 'pry'
 gem 'tux'
 gem 'require_all'
+gem 'activerecord'
+gem 'rake'
 
 group :test do
   gem 'rspec'
