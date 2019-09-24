@@ -1,7 +1,7 @@
 # class Pirate < ActiveRecord::Base
 #   has_many :ships
 
-  class Pirate 
+  class Pirate
   attr_reader :name, :weight, :height
 
   PIRATES = []
@@ -10,7 +10,8 @@
     @name = params[:name]
     @weight = params[:weights]
     @height = params[:height]
-  end 
+    PIRATES << self
+  end
 
   def self.all
     PIRATES

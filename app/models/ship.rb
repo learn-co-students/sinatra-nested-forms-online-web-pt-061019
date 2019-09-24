@@ -1,7 +1,7 @@
 # class Ship < ActiveRecord::Base
 #   belongs_to :pirate
 
-  class Ship 
+  class Ship
   attr_reader :name, :type, :booty
 
   SHIPS = []
@@ -10,7 +10,8 @@
     @name = params[:name]
     @type = params[:type]
     @booty = params[:booty]
-  end 
+    SHIPS << self
+  end
 
   def self.all
     SHIPS
