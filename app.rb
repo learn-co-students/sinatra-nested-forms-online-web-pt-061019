@@ -12,24 +12,13 @@ module FormsLab
       erb :'pirates/new'
     end
 
-    get '/pirates' do
-      @pirates = Pirate.all
-      erb :'/pirates/index'
-    end
-
-    get '/pirates/:id' do
-      @pirate = Pirate.find(params[:id])
-      erb :'pirates/show'
-    end
-
     post '/pirates' do
-      pirate = Pirate.new(name: params[:pirate][:name], height: params[:pirate][:height], weight: params[:pirate][:weight])
+      @pirate = Pirate.new(params[:pirate])
       params[:pirate][:ships].each do |all_ships|
-        ship = Ship.new(all_ships)
-        ship.pirate = pirate
-        ship.save
+        Ship.new(all_ships)
       end
-    redirect to "/pirates/#{pirate.id}"
+      @ships = Ship.all
+      erb :'/pirates/show'
     end
 
 end
